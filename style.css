@@ -889,7 +889,7 @@ a {
       }
 
       .intro-right {
-        width: 100%;
+        width: 80%;
 
         &::after {
           display: none;
