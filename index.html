@@ -56,16 +56,12 @@
       <header class="main-header">
         <div class="container">
           <div class="social-links">
-            <a href="https://www.facebook.com/divineerp"
-              ><i class="fa-brands fa-facebook-f fa-lg"></i
+            <a href="#"
+              ><i class="fa-brands fa-whatsapp" onclick="WA_Msg()"></i
             ></a>
-            <a href="https://x.com/DivineDTS"
-              ><i class="fa-brands fa-twitter fa-lg"></i
+            <a href="window.open('tel:+917574001002')"
+              ><i class="fa-regular fa-phone-volume"></i
             ></a>
-            <a href="http://www.linkedin.com/pub/divine-dts/45/32/a43?trk=tbr"
-              ><i class="fa-brands fa-linkedin-in fa-lg"></i
-            ></a>
-            <a href="#"><i class="fa-brands fa-skype fa-lg"></i></a>
           </div>
           <div class="logo">
             <a href="#"
@@ -461,6 +457,12 @@
           });
         });
       });
+
+      function WA_Msg() {
+        let win = window.open(
+          `whatsapp://send?phone=917574001002&text=Hi, I am interested in ERP.`,
+        );
+      }
 
       // header function call
       document.addEventListener("DOMContentLoaded", () => {
