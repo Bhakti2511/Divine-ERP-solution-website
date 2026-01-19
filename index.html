@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -73,15 +73,19 @@
             /></a>
             <h2>Divine ERP Solution Pvt. Ltd.</h2>
           </div>
-          <nav class="main-nav">
+          <nav class="main-nav" id="main-nav">
             <ul>
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#module">Modules</a></li>
               <li><a href="#feature">About Us</a></li>
-
-              <!-- <li><a href="#">Contact Us</a></li> -->
             </ul>
           </nav>
+
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </header>
 
@@ -333,6 +337,7 @@
         </div>
       </footer>
     </section>
+
     <script>
       function showHeaderFromBanner() {
         const header = document.querySelector(".main-header");
@@ -355,6 +360,26 @@
 
         // Run once on load
         onScroll();
+      }
+
+      function initHamburgerMenu() {
+        const hamburger = document.querySelector(".hamburger");
+        const nav = document.querySelector(".main-nav");
+
+        hamburger.addEventListener("click", () => {
+          console.log("Hamburger menu clicked");
+          hamburger.classList.toggle("active");
+          nav.classList.toggle("active");
+        });
+
+        // Optional: close menu when link clicked
+        document.querySelectorAll(".main-nav a").forEach((link) => {
+          link.addEventListener("click", () => {
+            console.log("Navigation link clicked");
+            hamburger.classList.remove("active");
+            nav.classList.remove("active");
+          });
+        });
       }
 
       document.addEventListener("DOMContentLoaded", () => {
@@ -400,7 +425,7 @@
         dots.forEach((dot) => {
           dot.addEventListener("click", (event) => {
             const newIndex = parseInt(
-              event.target.getAttribute("data-slide-index")
+              event.target.getAttribute("data-slide-index"),
             );
             showSlide(newIndex, true);
           });
@@ -408,7 +433,10 @@
       });
 
       // header function call
-      document.addEventListener("DOMContentLoaded", showHeaderFromBanner);
+      document.addEventListener("DOMContentLoaded", () => {
+        showHeaderFromBanner();
+        initHamburgerMenu();
+      });
     </script>
   </body>
 </html>
