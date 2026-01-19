@@ -1201,5 +1201,14 @@ a {
         }
       }
     }
+
+    main {
+      position: relative;
+
+      .module-section {
+        position: relative;
+        padding: 40px 0 60px;
+      }
+    }
   }
 }
