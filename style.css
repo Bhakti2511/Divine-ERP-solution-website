@@ -624,6 +624,12 @@ a {
           }
         }
       }
+
+      &:nth-of-type(even) {
+        .container {
+          flex-direction: row-reverse;
+        }
+      }
     }
 
     .module-section:last-child {
