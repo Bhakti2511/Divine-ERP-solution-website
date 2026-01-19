@@ -859,6 +859,12 @@ a {
             }
           }
         }
+
+        &:nth-of-type(even) {
+          .container {
+            flex-direction: column;
+          }
+        }
       }
     }
   }
