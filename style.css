@@ -250,7 +250,7 @@ a {
 .main-section {
   /* Header */
   .main-header {
-    background-color: #05182c;
+    background-color: #152238;
     backdrop-filter: blur(6px);
     box-shadow: 0 1px 4px #0000006e;
     position: fixed;
@@ -986,7 +986,7 @@ a {
           top: 100%;
           left: 0;
           width: 100%;
-          background-color: #072039bf;
+          background-color: #152238f7;
           box-shadow: 0 1px 4px #0000006e;
           overflow: hidden;
           height: 0px;
