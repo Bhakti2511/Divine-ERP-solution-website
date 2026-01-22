@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divine ERP Solution</title>
+    <title>IT Solutions - Video Banner & Slider</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
@@ -55,14 +55,6 @@
       <!-- fix Header  -->
       <header class="main-header">
         <div class="container">
-          <div class="social-links">
-            <a href="#"
-              ><i class="fa-brands fa-whatsapp" onclick="WA_Msg()"></i
-            ></a>
-            <a href="window.open('tel:+917574001002')"
-              ><i class="fa-regular fa-phone-volume"></i
-            ></a>
-          </div>
           <div class="logo">
             <a href="#"
               ><img
@@ -71,6 +63,7 @@
             /></a>
             <h2>Divine ERP Solution Pvt. Ltd.</h2>
           </div>
+
           <nav class="main-nav" id="main-nav">
             <ul>
               <li class="active"><a href="#">Home</a></li>
@@ -326,17 +319,20 @@
       <!-- Footer -->
       <footer class="main-footer">
         <div class="footer-bottom">
-          <p class="contact-contact call">
-            <i class="fa fa-phone-alt fa-lg"></i
-            ><a href="tel:7574001002">+917574001002</a>
-          </p>
           <p class="rights">
             &copy; 2025 Divine ERP Solutions Pvt. Ltd. All rights reserved.
           </p>
-          <p class="contact-contact email">
-            <i class="fa fa-envelope fa-lg"></i
-            ><a href="mailto:info@divineerp.com"> info@divineerp.com</a>
-          </p>
+
+          <div class="social-links">
+            <a href="#" class="social wa"
+              ><i class="fa-brands fa-whatsapp" onclick="WA_Msg()"></i
+              ><label>Message Us Anytime</label></a
+            >
+            <a href="window.open('tel:+917574001002')" class="social call"
+              ><i class="fa-regular fa-phone-volume"> </i
+              ><label>+917574001002</label></a
+            >
+          </div>
         </div>
       </footer>
     </section>
@@ -408,6 +404,39 @@
         });
       }
 
+      function initSocialIcons() {
+        const socials = document.querySelectorAll(".social");
+        if (!socials.length) return;
+
+        // Only initialize for desktop (screen width > 768px)
+        if (window.innerWidth <= 768) return;
+
+        socials.forEach((icon) => {
+          icon.addEventListener("mouseenter", () => {
+            icon.classList.add("active");
+            if (icon.classList.contains("call")) {
+              document
+                .querySelector(".social-links")
+                ?.classList.add("call-active");
+            }
+          });
+
+          icon.addEventListener("mouseleave", () => {
+            icon.classList.remove("active");
+            if (icon.classList.contains("call")) {
+              document
+                .querySelector(".social-links")
+                ?.classList.remove("call-active");
+            }
+          });
+
+          icon.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.location.href = icon.href;
+          });
+        });
+      }
+
       document.addEventListener("DOMContentLoaded", () => {
         const slides = document.querySelectorAll(".banner-slide");
         const dots = document.querySelectorAll(".slider-dot");
@@ -464,10 +493,11 @@
         );
       }
 
-      // all function call
+      // header function call
       document.addEventListener("DOMContentLoaded", () => {
         showHeaderFromBanner();
         initHamburgerMenu();
+        initSocialIcons();
       });
     </script>
   </body>
