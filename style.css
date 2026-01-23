@@ -1183,6 +1183,13 @@ a {
             &.call {
               transform: translateX(15px);
             }
+
+            &.wa:hover,
+            &.call:hover {
+              i {
+                transform: translateX(0px);
+              }
+            }
           }
         }
       }
