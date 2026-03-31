@@ -9,16 +9,19 @@
     <link
       href="https://divineerp-resource.s3.ap-south-1.amazonaws.com/icons/Divine_ERP_64x64.ico"
       rel="icon"
-      type="image/x-icon" />
-    
+      type="image/x-icon"
+    />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet" />
+      rel="stylesheet"
+    />
 
     <!-- FontAwsome -->
     <link
       rel="stylesheet"
-      href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" />
+      href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css"
+    />
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -38,7 +41,7 @@
 
         <!-- Right -->
         <div class="intro-right">
-          <form class="login-card">
+          <form class="login-card" id="form-signin">
             <h3>Login</h3>
 
             <div class="field">
@@ -51,7 +54,65 @@
               <label>Password</label>
             </div>
 
-            <button type="submit" class="login-btn">Sign In</button>
+            <button type="submit" class="login-btn">Sign in</button>
+            <span id="go-to-signup" class="create-account">
+              Don't have an account? Sign Up</span
+            >
+          </form>
+
+          <form class="login-card" id="form-signup">
+            <h3>Sign Up</h3>
+
+            <div class="field">
+              <input type="text" required />
+              <label>Name</label>
+            </div>
+
+            <div class="field">
+              <input type="email" required />
+              <label>Email</label>
+            </div>
+
+            <div class="field">
+              <input type="number" required />
+              <label>Phone Number</label>
+            </div>
+
+            <div class="field">
+              <textarea required></textarea>
+              <label>Address</label>
+            </div>
+
+            <div class="field">
+              <input type="text" required />
+              <label>Username</label>
+            </div>
+
+            <div class="field">
+              <input type="password" required />
+              <label>Password</label>
+            </div>
+
+            <div class="field">
+              <input type="confirm-password" required />
+              <label>Confirm Password</label>
+            </div>
+
+            <script
+              src="https://www.google.com/recaptcha/api.js"
+              async
+              defer
+            ></script>
+
+            <div
+              class="g-recaptcha"
+              data-sitekey="6Lclap8sAAAAAAmHosVDJ7ncbHLeyfZ125HkTgV6"
+            ></div>
+
+            <button type="submit" class="login-btn">Sign up</button>
+            <span id="go-to-signin" class="create-account">
+              Go back to Login Page</span
+            >
           </form>
         </div>
       </div>
@@ -89,7 +150,8 @@
       <!-- Banner Section -->
       <section class="banner-section">
         <img
-          src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/wallpaper/aurora/C0EDFF8E-7FF2-4774-83A2-772B25B624B6.jpg" />
+          src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/wallpaper/aurora/C0EDFF8E-7FF2-4774-83A2-772B25B624B6.jpg"
+        />
 
         <div class="slider-container">
           <div class="banner-slide active" data-slide-index="0">
@@ -169,11 +231,13 @@
           <div class="feature-vector">
             <script
               src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.5/dist/dotlottie-wc.js"
-              type="module"></script>
+              type="module"
+            ></script>
             <dotlottie-wc
               src="https://lottie.host/89272e88-2da1-4fc5-af8a-75c67d066bf5/yBw6LA7DDV.lottie"
               autoplay
-              loop></dotlottie-wc>
+              loop
+            ></dotlottie-wc>
           </div>
         </div>
       </section>
@@ -210,7 +274,8 @@
 
             <div class="module-vector">
               <img
-                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/88359134-4499-4CEF-AC5B-2DAFE1EFAB18.png" />
+                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/88359134-4499-4CEF-AC5B-2DAFE1EFAB18.png"
+              />
             </div>
           </div>
         </section>
@@ -246,7 +311,8 @@
 
             <div class="module-vector">
               <img
-                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/D03D2FEC-FD15-4965-9AEF-DAE22E1FB706.png" />
+                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/D03D2FEC-FD15-4965-9AEF-DAE22E1FB706.png"
+              />
             </div>
           </div>
         </section>
@@ -280,7 +346,8 @@
 
             <div class="module-vector">
               <img
-                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/593497B6-DDDE-4C71-A696-7233BCD56154.png" />
+                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/593497B6-DDDE-4C71-A696-7233BCD56154.png"
+              />
             </div>
           </div>
         </section>
@@ -316,7 +383,8 @@
 
             <div class="module-vector">
               <img
-                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/2AD2C18D-42FD-43EA-8027-A739302ACDD3.png" />
+                src="https://divineerp-resource.s3.ap-south-1.amazonaws.com/images/website/2AD2C18D-42FD-43EA-8027-A739302ACDD3.png"
+              />
             </div>
           </div>
         </section>
@@ -336,7 +404,8 @@
             </div>
             <div
               class="social-item call"
-              onclick="window.open('tel:+917574001002')">
+              onclick="window.open('tel:+917574001002')"
+            >
               <i class="fa-regular fa-phone-volume"> </i
               ><span>+917574001002</span>
             </div>
@@ -460,6 +529,62 @@
             showSlide(newIndex, true);
           });
         });
+
+        // header function call
+        showHeaderFromBanner();
+        initHamburgerMenu();
+      });
+
+      function toggleLoginSignup() {
+        const signinForm = document.getElementById("form-signin");
+        const signupForm = document.getElementById("form-signup");
+        const goToSignup = document.getElementById("go-to-signup");
+        const goToSignin = document.getElementById("go-to-signin");
+
+        if (goToSignup) {
+          goToSignup.addEventListener("click", () => {
+            signinForm.style.display = "none";
+            signupForm.style.display = "block";
+
+            document.querySelectorAll(".login-card").forEach((card) => {
+              card.style.height = "fit-content";
+            });
+          });
+        }
+
+        if (goToSignin) {
+          goToSignin.addEventListener("click", () => {
+            signupForm.style.display = "none";
+            signinForm.style.display = "block";
+          });
+        }
+      }
+
+      toggleLoginSignup();
+
+      document.getElementById("form-signup").addEventListener("submit", (e) => {
+        const response = grecaptcha.getResponse();
+
+        if (response.length === 0) {
+          e.preventDefault();
+          alert("Please complete the CAPTCHA before submitting.");
+        }
+      });
+
+      const axios = require("axios");
+
+      app.post("/signup", async (req, res) => {
+        const token = req.body["g-recaptcha-response"];
+        const secretKey = "6Lclap8sAAAAAJ84tIjYNPH6JtSnwO2RsNjIpmQ2"; // Keep this hidden!
+
+        const response = await axios.post(
+          `https://www.google.com/recaptcha/api/siteverify?secret=${secretKey}&response=${token}`,
+        );
+
+        if (response.data.success) {
+        } else {
+          res.status(400).send("CAPTCHA failed.");
+        }
       });
 
       function WA_Msg() {
@@ -467,12 +592,6 @@
           `whatsapp://send?phone=917574001002&text=Hi, I am interested in ERP.`,
         );
       }
-
-      // header function call
-      document.addEventListener("DOMContentLoaded", () => {
-        showHeaderFromBanner();
-        initHamburgerMenu();
-      });
     </script>
   </body>
 </html>
